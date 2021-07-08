@@ -1,0 +1,74 @@
+note School git 200 :
+Quelque externe
+Sfeirien lux est paris
+Personnel et validation des bonnes pratiques
+
+pas de visibilité sur le temps de deroulement
+
+rappel school 200
+demande de retour sur la scool
+presentation du speaker
+
+Tour de presentation
+
+prequis :
+compte github
+
+Pourquoi la formation 
+- git parit du quotidien, croisé des problème -> restitution des experiences
+
+part 1 Config git
+3 niveau de git config
+Global : ~/igitconfig
+local : .git/config
+System : gitconfig (on y touch pas bcp, configuration par systeme)
+
+Global :
+transverse a tous les repo manipuler
+
+1er config definition user + email (obligatoire pour commiter)
+
+utilisation Cloud Shell (contient git + go + visual ...)
+
+? que ce passe t il si on utilise un autre email
+(exemple email noreply github)
+[email]@users.noreply.github.com (marche avant juillet 2017 -> protection regenré addresse no reply pour se protger)
+
+creation local git : mkdir rep, cd rep , git init + 1rst commit
+-> Commit : pas de souci
+-> Push : pas d'erreur : prise d'identité
+
+GPG
+GPG open pgp : signe et securise les communication
+important pour protéger les commit
+commit -ammend ne change pas forcement le proprio du commit
+
+manque export GPG_TTY=$(tty) dans le slide pour que la commande passe
+
+mise en place de GPG a partir de 2
+4096
+real name : user.name git
+email adresse : obligatoire email github
+passphrase
+
+KO en local a voir why ( gpg2 --full-gen-key)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
