@@ -1,4 +1,6 @@
 note School git 200 :
+https://slides.com/thomasgruson/deck#/4
+
 Quelque externe
 Sfeirien lux est paris
 Personnel et validation des bonnes pratiques
@@ -51,7 +53,104 @@ real name : user.name git
 email adresse : obligatoire email github
 passphrase
 
-KO en local a voir why ( gpg2 --full-gen-key)
+KO en local a voir why ( gpg2 --full-gen-key,git config --global gpg.program gpg2)
+
+export gpgKeyID
+
+git commit -S -m "Test signed message"
+gpg: skipped "77A73F11B98A91E4": secret key not available
+gpg: signing failed: secret key not available
+error: gpg failed to sign the data
+fatal: failed to write commit object
+
+etape ensuite signature dans github pour valider la signature
+configuration du refraichissement de l'ajout de la passphras de la signature pour pas le refaire tout le temps
+
+Configuration de l'editor de commit
+conseil de configurer la config git plutot que de s'appuyer sur des variable global
+
+configuration gloabl de gitinore car evite de configurer a chaque fois
+Le nom de fihier n'est pas normé l'association se fait en link file
+
+Congiuration branchprincipale main
+->  fait par github car main plus cour que master et surtout plus cohérent avec l'objectif
+
+a paritr de git 2.28
+evolution en plus : git restore pour remplacer git reset ...
+
+configuration wrong write commande
+-> autocorrect
+git config --global help.autocorrect 30
+-> 3 seconde
+
+configuration upStream
+valable surtout pour push upstream
+push sur la branch courante
+
+
+2 type alias : racourci commande git ou cammande shell
+
+Contenue d'un commit
+Full files content (hasher et zlib)
+commiter
+message
+creation datetime
+Commit ancestor
+
+prob de conflit de sha1 : 16⁴⁰ = 1 chance sur 1.4615016e+48
+pour eviter ca car c'est la mega merde passé de SHA-1 à SHA-256
+
+git 2.19 SHA-256 optionnel
+
+SHA-1 40 character -> utilisation short SHA-1 conflit plus probalble
+min short sha : 4
+conseil 7 car depuis 2010 risqué de mettre 7
+
+
+Zone de git
+history/stagging(index)/working directory
+a revoir
+
+**Pause midi**
+
+reference
+-> pointeur
+
+Hash d'un commit : refrence static
+branch : ref dynamic
+
+
+eccho 'SHA1' > .git/refs/heads/develop
+checkout develop -> marche 
+.git/refs/HEAD point vers une branch et un sha1 detach head
+
+History : utilisation git reset (commit / ref)
+ne touche pas au working dir
+
+Si on veux clean le WD avec --hard
+
+recupérer un commit non referencé :
+utilisation de ORIG_HEAD : precendent SHA-1 ciblé par HEAD
+git reset --hard ORIG_HEAD
+
+Merge/Rebase
+rebase change la signature du commit sur la branch
+creer un merge commit (commit a plusieur parent)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
